@@ -52,31 +52,85 @@ eStruct.shappyBirthday()
 
 // TUPLE
 let myTuple = (1,3)
-print(myTuple.0)
+//print(myTuple.0)
 
 var mytuple2 = (1,3,5)
 mytuple2.2 = 10
-print(mytuple2.2)
+//print(mytuple2.2)
 
 let myTuple3 = ("Fatih" , 10)
 
 let myTuple4 = (1,[10,20,30])
-print(myTuple4.1[1])
+//print(myTuple4.1[1])
 
 let predefinedTuple : (String , String)
 
 predefinedTuple.0 = "Fatih"
 predefinedTuple.1 = "Oguz"
 
-print(predefinedTuple)
+//print(predefinedTuple)
 
 let newTuple = (name:"fatih" , test:true)
-print(newTuple.name)
-print(newTuple.test)
+//print(newTuple.name)
+//print(newTuple.test)
 
 // Guard Let vs If Let
 // Guard -> negative
 // If -> positive
 
+let myNumber = "10"
 
+func convertToIntegerIf(stringInput: String) -> Int {
+    if let myInteger = Int(stringInput){
+        return myInteger
+    }else {
+        return 0
+    }
+}
+func convertToIntegerGuard(stringInput: String) -> Int {
+    guard let myInteger = Int(stringInput) else {
+        return 0
+    }
+    return myInteger
+}
+//print(convertToIntegerIf(stringInput: myNumber))
+//print(convertToIntegerGuard(stringInput: myNumber ))
 
+// SWITCH
+
+let myNum = 11
+
+//Remainder
+let myRemainder = myNum % 2
+//print(myRemainder)
+/*
+if myRemainder == 1 {
+print("it's 1")
+}else if myRemainder == 2 {
+print("it's 2")
+}else if myRemainder == 3{
+print("it's 3")
+}
+*/
+/*
+switch myRemainder {
+case 1 :
+    print("it's 1")
+case 2:
+    print("it's 2")
+case 3:
+    print("it's 3")
+default:
+    print("...")
+}
+*/
+
+//BREAKPOINT
+
+var x = 1
+ 
+print(x)
+
+x += 1
+
+print(x)
